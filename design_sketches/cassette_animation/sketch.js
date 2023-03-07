@@ -16,6 +16,7 @@ function setup() {
   img.resize(600, 0);
   createCanvas(img.width, img.height);
   frameRate(30);
+  pixelDensity(4);
   noStroke();
   //image(img, 0, 0);
   //img.filter(INVERT);
@@ -94,5 +95,12 @@ function isInCircle(x, y, x1, y1, r1, x2, y2, r2) {
 function keyPressed() {
     if (key === 's') {
         saveGif("cassette.gif", 2*N_FRAMES, {delay: 0, units: "frames"});
+    }
+    if (key == " ") {
+      if (isLooping()) {
+        noLoop();
+      } else {
+        loop();
+      }
     }
 }
