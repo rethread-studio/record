@@ -8,13 +8,32 @@ let dark_green = "#147600";
 let neon_pink = "#E80985";
 let dark_pink = "#7C0087";
 
+// from https://phpcoder.tech/check-if-folder-file-exists-using-javascript/
+function checkFileExist(urlToFile) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('HEAD', urlToFile, false);
+  xhr.send();
+   
+  if (xhr.status == "404") {
+      return false;
+  } else {
+      return true;
+  }
+}
+
 function preload() {
-  img = loadImage("cassette_mask.png");
+  if (checkFileExist("cassette_mask.png")) {
+    img = loadImage("cassette_mask.png");
+  } else {
+    img = loadImage("design_sketches/cassette_animation/cassette_mask.png");
+  }
 }
 
 function setup() {
   img.resize(600, 0);
-  createCanvas(img.width, img.height);
+  let cnv = createCanvas(img.width, img.height);
+  let cassetteDiv = select("#cassetteDiv");
+  if (cassetteDiv) cnv.parent("cassetteDiv");
   frameRate(30);
   pixelDensity(4);
   noStroke();

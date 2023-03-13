@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>re|cord</title>
+  <meta name="description" content="re|cord - re|thread sound works">
+  <meta name="author" content="re|thread">
+
+  <meta property="og:title" content="re|cord">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://record.rethread.art/A.html">
+  <meta property="og:description" content="re|cord A side - re|thread software art music and sound art">
+  <!-- <meta property="og:image" content="image.png"> -->
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js"></script>
+  <script src="design_sketches/cassette_animation/sketch.js"></script>
+</head>
+
+<body>
+    <div class="vertical-centering-container">
+        <h1 id="header">re|cord by re|thread</h1>
+        <div id="cassetteDiv">
+          <!--<img src="design_sketches/cassette_animation/cassette.gif" style="width:100%"/>-->
+        </div>
+        <div id="links">
+          <h2>
+            <a href="A.html" class="green">side A</a> <span class="pink">/</span> <a href="B.html" class="green">side B</a> <span class="pink">/</span> <a href="C.html" class="green">credits</a>
+          </h2>
+        </div>
+    </div>
+    <button class="cornered" onclick="showOrHide('popup-info');">i</button>
+    <div id="popup-info" style="display:none">
+        <p id="info-text">
+            re|cord is a concept album with selected pieces of sonified software and data from more that 3 years of practise by the software art collective <a href="https://rethread.art/">re|thread</a>.
+        </p>
+    </div>
+
+    <script type="text/javascript">
+        function showOrHide(elementId) {
+            let e = document.getElementById(elementId);
+            e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
