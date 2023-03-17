@@ -44,7 +44,7 @@ function setup() {
   shadow_offset = width/200;
 
   backCassetteLayer = makeCassetteLayer(dark_green, shadow_offset);
-  frontCassetteLayer = makeCassetteLayer(neon_green, shadow_offset);
+  frontCassetteLayer = makeCassetteLayer(neon_green, 0);
 }
 
 function draw() {
