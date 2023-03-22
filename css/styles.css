@@ -36,11 +36,18 @@ h1#header {
     font-family: 'NeueBit-Bold', sans-serif;
     margin: 0;
     text-shadow: 3px 3px 0 var(--dark-green), 6px 6px 0 var(--neon-pink), 9px 9px 0 var(--dark-pink);
+    text-align: center;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     h1#header {
         font-size: 5rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+        display: none;
     }
 }
 
