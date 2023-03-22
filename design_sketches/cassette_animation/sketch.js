@@ -1,4 +1,4 @@
-let img, backCassetteLayer, frontCassetteLayer;
+let originalImg, img, backCassetteLayer, frontCassetteLayer;
 let s, shadow_offset;
 
 const N_FRAMES = 42;
@@ -23,19 +23,22 @@ function checkFileExist(urlToFile) {
 
 function preload() {
   if (checkFileExist("cassette_mask.png")) {
-    img = loadImage("cassette_mask.png");
+    originalImg = loadImage("cassette_mask.png");
   } else {
-    img = loadImage("design_sketches/cassette_animation/cassette_mask.png");
+    originalImg = loadImage("design_sketches/cassette_animation/cassette_mask.png");
   }
 }
 
 function setup() {
-  img.resize(600, 0);
+  img = createImage(originalImg.width, originalImg.height);
+  img.copy(originalImg, 0, 0, originalImg.width, originalImg.height, 0, 0, originalImg.width, originalImg.height);
+  let size = min(600, windowWidth*0.9);
+  img.resize(size, 0);
   let cnv = createCanvas(img.width, img.height);
   let cassetteDiv = select("#cassetteDiv");
   if (cassetteDiv) cnv.parent("cassetteDiv");
   frameRate(30);
-  pixelDensity(4);
+  pixelDensity(2);
   noStroke();
   //image(img, 0, 0);
   //img.filter(INVERT);
@@ -122,4 +125,21 @@ function keyPressed() {
         loop();
       }
     }
+}
+
+function windowResized() {
+  let size = min(600, windowWidth*0.9);
+  if (size != width) {
+    img = createImage(originalImg.width, originalImg.height);
+    img.copy(originalImg, 0, 0, originalImg.width, originalImg.height, 0, 0, originalImg.width, originalImg.height);
+    img.resize(size, 0);
+    resizeCanvas(img.width, img.height);
+    s = width/80;
+    shadow_offset = width/200;
+
+    backCassetteLayer.remove();
+    frontCassetteLayer.remove();
+    backCassetteLayer = makeCassetteLayer(dark_green, shadow_offset);
+    frontCassetteLayer = makeCassetteLayer(neon_green, 0);
+  }
 }

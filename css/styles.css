@@ -7,6 +7,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+@font-face {
+    font-family: 'NeueBit-Bold';
+    src: url('../assets/NeueBit-Bold/NeueBit-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
 body {
     background-color: black;
     color: var(--neon-green);
@@ -25,8 +31,25 @@ h1 {
     font-size: 2.5rem;
 }
 
+h1#header {
+    font-size: 7rem;
+    font-family: 'NeueBit-Bold', sans-serif;
+    margin: 0;
+    text-shadow: 3px 3px 0 var(--dark-green), 6px 6px 0 var(--neon-pink), 9px 9px 0 var(--dark-pink);
+}
+
+@media screen and (max-width: 700px) {
+    h1#header {
+        font-size: 5rem;
+    }
+}
+
 h2 {
     font-size: 1.5rem;
+}
+
+div#cassetteDiv {
+    height: 50%
 }
 
 .vertical-centering-container {
@@ -60,7 +83,7 @@ button.cornered {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 button.cornered:active {
