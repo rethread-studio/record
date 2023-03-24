@@ -1,7 +1,9 @@
 let originalImg, img, backCassetteLayer, frontCassetteLayer;
 let s, shadow_offset;
 
-const N_FRAMES = 42;
+const N_ANIM = 42; // number of frames of the animation
+const N_PAUSE = 21; // number of frames of the pause between the animations
+const N_FRAMES = 2*(N_ANIM + N_PAUSE); // total number of frames of 1 loop
 
 let neon_green = "#69ff00";
 let dark_green = "#147600";
@@ -86,11 +88,15 @@ function makeCassetteLayer(col, offset) {
 }
 
 function drawWheels(col, offset) {
-  let t = (frameCount%N_FRAMES)/N_FRAMES;
+  let t = frameCount%(N_ANIM+N_PAUSE)/N_ANIM;
   let x1 = width/3, x2 = width-x1, y1 = height/2, y2 = y1;
   let dMin = width/8, dMax = width/3;
-  let d1 = map(t, 0, 1, dMin, dMax), d2 = map(t, 0, 1, dMax, dMin);
-  if (frameCount%(2*N_FRAMES) < N_FRAMES) [d1, d2] = [d2, d1];
+  let d1 = map(sqrt(t), 0, 1, dMin, dMax), d2 = map(sq(t), 0, 1, dMax, dMin);
+
+  let f = frameCount%N_FRAMES;
+  if (f >= N_ANIM && f < N_ANIM + N_PAUSE) [d1, d2] = [dMax, dMin];
+  if (f >= N_ANIM + N_PAUSE && f < 2*N_ANIM + N_PAUSE) [d1, d2] = [d2, d1];
+  if (f >= 2*N_ANIM + N_PAUSE) [d1, d2] = [dMin, dMax];
 
   for (let x = 0; x < width; x += s) {
     for (let y = 0; y < height-s; y += s) {
