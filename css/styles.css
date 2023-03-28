@@ -46,7 +46,7 @@ h1#header {
 }
 
 @media screen and (min-width: 800px) {
-    h1 br {
+    h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
         display: none;
     }
 }
@@ -112,10 +112,10 @@ div#popup-info {
     font-size: 1rem;
 }
 
-a {
-    color: black;
-}
-
 p#info-text {
     margin: 0;
+}
+
+div#event-info {
+    font-size: 1.25rem;
 }
