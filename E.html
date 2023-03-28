@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>re|cord invite</title>
+  <title>re|cord</title>
   <meta name="description" content="re|cord - re|thread sound works">
   <meta name="author" content="re|thread">
 
   <meta property="og:title" content="re|cord">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://record.rethread.art/E.html">
+  <meta property="og:url" content="https://record.rethread.art/A.html">
   <meta property="og:description" content="re|cord A side - re|thread software art music and sound art">
   <!-- <meta property="og:image" content="image.png"> -->
 
@@ -21,18 +21,33 @@
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
+  <script src="libraries/p5.min.js"></script>
+  <script src="design_sketches/cassette_animation/sketch.js"></script>
 </head>
 
 <body>
-  <h1>re|cord re|lease invite</h1>
-  <!-- your content here... -->
-  <!-- <script src="js/scripts.js"></script> -->
-  <form action=”mailto:rkaufman@kth.se method=”POST” enctype=”text/plain” name=”EmailForm”>
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required="true"><br>
-    <label for="email">Email address:</label><br>
-    <input type="email" id="email" name="email"required="true"> <br>
-    <input type="submit" value="Send">
-  </form>
+    <div class="vertical-centering-container">
+        <h2 style="margin-bottom: -1rem">you are invited to the</h2>
+        <h1 id="header">re|cord <br> event</h1>
+        <div id="cassetteDiv">
+          <!--<img src="design_sketches/cassette_animation/cassette.gif" style="width:100%"/>-->
+        </div>
+        <div id="info">
+          <h3>
+            > where: den fantastiska platsen <br>
+            >> hornsgatan 124, 117 28 stockholm
+          </h3>
+          <h3>
+            > may the 4th, 2023 <br>
+            >> 17:00 - 22:00
+          </h3>
+        </div>
+        <h2 class="pink">
+          please register by sending an email to <a href="mailto:hello@rethread.art" class="green">hello@rethread.art</a>
+        </h2>
+    </div>
+
+    <!-- used to remove the "loading..." of the p5 sketch-->
+    <p style="display:none;" id="p5_loading"></p>
 </body>
 </html>
