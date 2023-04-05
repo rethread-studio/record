@@ -70,6 +70,12 @@ div#cassetteDiv {
     width: 100%;
 }
 
+.vertical-align-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 .pink {
     color: var(--neon-pink);
 }
@@ -131,15 +137,34 @@ div.QRDiv {
     margin-bottom: 5px;
 }
 
+details > summary {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details > summary::before {
+    content: '▸';
+    color: var(--neon-pink);
+}
+
+details[open] > summary::before {
+    content: '▾';
+    color: var(--neon-pink);
+}
+
 summary {
     font-size: 1.1rem;
 }
 
 .top-nav {
     text-align: center;
-    position: fixed;
     top: 0.5rem;
     width: 100%;
     font-size: 2rem;
     font-family: 'NeueBit-Bold', sans-serif;
+    margin-bottom: 2rem;
 }
