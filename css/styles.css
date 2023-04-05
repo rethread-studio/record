@@ -119,3 +119,27 @@ p#info-text {
 div#event-info {
     font-size: 1.25rem;
 }
+
+div.QRDiv {
+    text-align: center;
+    width: 300px;
+}
+
+.collapsibleProject {
+    width: 20rem;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+summary {
+    font-size: 1.1rem;
+}
+
+.top-nav {
+    text-align: center;
+    position: fixed;
+    top: 0.5rem;
+    width: 100%;
+    font-size: 2rem;
+    font-family: 'NeueBit-Bold', sans-serif;
+}
