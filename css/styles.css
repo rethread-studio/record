@@ -24,6 +24,11 @@ html,
 body {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
+    font-size: 14px;
+}
+
+html.no-scroll {
     overflow: hidden;
 }
 
@@ -70,7 +75,7 @@ div#cassetteDiv {
     width: 100%;
 }
 
-.vertical-align-container {
+.horizontal-align-container {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -84,17 +89,11 @@ div#cassetteDiv {
     color: var(--neon-green);
 }
 
-button.cornered {
-    background-color: var(--neon-green);
-    color: black;
-    border: none;
-    text-align: center;
-    text-decoration: none;
+.cornered {
     display: inline-block;
-    border-radius: 50%;
     cursor: pointer;
-    width: 1.75rem;
-    height: 1.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -134,7 +133,7 @@ div.QRDiv {
 .collapsibleProject {
     width: 20rem;
     font-size: 1rem;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
 
 details > summary {
@@ -166,5 +165,9 @@ summary {
     width: 100%;
     font-size: 2rem;
     font-family: 'NeueBit-Bold', sans-serif;
+    margin-bottom: 2rem;
+}
+
+div.tracks {
     margin-bottom: 2rem;
 }
