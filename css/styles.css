@@ -1,63 +1,69 @@
 :root {
-    --neon-green: #69ff00;
-    --dark-green: #147600;
-    --neon-pink: #E80985;
-    --dark-pink: #7C0087;
+  --neon-green: #69ff00;
+  --dark-green: #147600;
+  --neon-pink: #e80985;
+  --dark-pink: #7c0087;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @font-face {
-    font-family: 'NeueBit-Bold';
-    src: url('../assets/NeueBit-Bold/NeueBit-Bold.woff') format('woff');
-    font-weight: bold;
+  font-family: "NeueBit-Bold";
+  src: url("../assets/NeueBit-Bold/NeueBit-Bold.woff") format("woff");
+  font-weight: bold;
 }
 
 body {
-    background-color: black;
-    color: var(--neon-green);
-    font-family: 'Epilogue', sans-serif;
-    height: 100%;
+  background-color: black;
+  color: var(--neon-green);
+  font-family: "Epilogue", sans-serif;
+  height: 100%;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    font-size: 14px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 14px;
 }
 
 html.no-scroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 h1#header {
-    font-size: 6.5rem;
-    font-family: 'NeueBit-Bold', sans-serif;
-    margin: 0;
-    text-shadow: 3px 3px 0 var(--dark-green), 6px 6px 0 var(--neon-pink), 9px 9px 0 var(--dark-pink);
-    text-align: center;
+  font-size: 6.5rem;
+  font-family: "NeueBit-Bold", sans-serif;
+  margin: 0;
+  text-shadow: 3px 3px 0 var(--dark-green), 6px 6px 0 var(--neon-pink),
+    9px 9px 0 var(--dark-pink);
+  text-align: center;
 }
 
 @media screen and (max-width: 800px) {
-    h1#header {
-        font-size: 5rem;
-    }
+  h1#header {
+    font-size: 5rem;
+  }
 }
 
 @media screen and (min-width: 800px) {
-    h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
-        display: none;
-    }
+  h1 br,
+  h2 br,
+  h3 br,
+  h4 br,
+  h5 br,
+  h6 br {
+    display: none;
+  }
 }
 
 h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 /*
@@ -67,107 +73,107 @@ div#cassetteDiv {
 */
 
 .vertical-centering-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .horizontal-align-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .pink {
-    color: var(--neon-pink);
+  color: var(--neon-pink);
 }
 
 .green {
-    color: var(--neon-green);
+  color: var(--neon-green);
 }
 
 .cornered {
-    display: inline-block;
-    cursor: pointer;
-    width: 2.25rem;
-    height: 2.25rem;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 2rem;
+  display: inline-block;
+  cursor: pointer;
+  width: 2.25rem;
+  height: 2.25rem;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2rem;
 }
 
 button.cornered:active {
-    background-color: var(--dark-green);
+  background-color: var(--dark-green);
 }
 
 div#popup-info {
-    background-color: var(--neon-green);
-    color: black;
-    position: absolute;
-    bottom: 47px;
-    right: 10px;
-    width: 10rem;
-    padding: 1rem;
-    display: inline-block;
-    border-radius: 2px;
-    font-size: 1rem;
+  background-color: var(--neon-green);
+  color: black;
+  position: absolute;
+  bottom: 47px;
+  right: 10px;
+  width: 10rem;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 1rem;
 }
 
 p#info-text {
-    margin: 0;
+  margin: 0;
 }
 
 div#event-info {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 div.QRDiv {
-    text-align: center;
-    width: 300px;
+  text-align: center;
+  width: 340px;
 }
 
 .collapsibleProject {
-    width: 20rem;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+  width: 22rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 details > summary {
-    list-style-type: none;
-    cursor: pointer;
+  list-style-type: none;
+  cursor: pointer;
 }
 
 details > summary::-webkit-details-marker {
-    display: none;
+  display: none;
 }
 
 details > summary::before {
-    content: '▸';
-    color: var(--neon-pink);
+  content: "▸";
+  color: var(--neon-pink);
 }
 
 details[open] > summary::before {
-    content: '▾';
-    color: var(--neon-pink);
+  content: "▾";
+  color: var(--neon-pink);
 }
 
 summary {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .top-nav {
-    text-align: center;
-    top: 0.5rem;
-    width: 100%;
-    font-size: 2rem;
-    font-family: 'NeueBit-Bold', sans-serif;
-    margin-bottom: 2rem;
+  text-align: center;
+  top: 0.5rem;
+  width: 100%;
+  font-size: 2rem;
+  font-family: "NeueBit-Bold", sans-serif;
+  margin-bottom: 2rem;
 }
 
 div.tracks {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
