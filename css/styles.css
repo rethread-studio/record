@@ -177,3 +177,11 @@ summary {
 div.tracks {
   margin-bottom: 2rem;
 }
+
+iframe {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  height: 1080px;
+  width: 90%;
+  border-color: var(--neon-green);
+}
